@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#242923" />
+  <meta name="description" content="Professional glass measurement, cutting, putty and window glass installation for homes and buildings across Kajiado County and Nairobi, Kenya." />
+  <title>Spoken Seed | Glass Work for Your Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #242923;
+      --muted: #656b62;
+      --paper: #f7f6f1;
+      --white: #fffefa;
+      --line: #e3e3da;
+      --bronze: #a8794c;
+      --bronze-dark: #805a36;
+      --sage: #e7eae1;
+      --radius: 18px;
+      --shadow: 0 18px 55px rgba(28, 34, 27, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; line-height: 1.6; }
+    h1, h2, h3, .brand { font-family: "Manrope", sans-serif; letter-spacing: -.035em; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .topline { background: var(--ink); color: #f4f2e9; font-size: .78rem; letter-spacing: .04em; }
+    .topline .container { display: flex; justify-content: space-between; gap: 18px; padding: 9px 0; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(247,246,241,.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(36,41,35,.08); }
+    nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 1.02rem; line-height: 1.15; }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #c5b59e; color: var(--bronze-dark); border-radius: 12px; font-size: 1.1rem; }
+    .brand small { display: block; font: 500 .65rem "DM Sans", sans-serif; letter-spacing: .13em; color: var(--muted); margin-top: 4px; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 27px; font-size: .91rem; color: #4f554d; }
+    .nav-links a:hover { color: var(--bronze-dark); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-radius: 999px; padding: 13px 20px; background: var(--ink); color: white; font: 700 .9rem "DM Sans", sans-serif; cursor: pointer; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); background: #3a4338; }
+    .btn-bronze { background: var(--bronze); }
+    .btn-bronze:hover { background: var(--bronze-dark); }
+    .btn-outline { background: transparent; border: 1px solid #c7c9bf; color: var(--ink); }
+    .btn-outline:hover { background: white; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: transparent; padding: 9px 12px; border-radius: 10px; font-size: 1.1rem; }
+    .hero { padding: 56px 0 76px; }
+    .hero-grid { display: grid; grid-template-columns: .93fr 1.07fr; gap: 54px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--bronze-dark); font-size: .76rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; }
+    .eyebrow:before { content: ""; display: inline-block; width: 25px; height: 1px; background: var(--bronze); }
+    h1 { font-size: clamp(2.7rem, 5vw, 4.7rem); line-height: 1.04; font-weight: 700; margin: 21px 0; max-width: 610px; }
+    h1 em { font-style: normal; color: var(--bronze-dark); }
+    .hero-copy { font-size: 1.08rem; color: var(--muted); max-width: 510px; margin: 0 0 27px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 31px; color: #5f655c; font-size: .84rem; }
+    .trust-row span:before { content: "✓"; color: var(--bronze-dark); font-weight: 800; margin-right: 8px; }
+    .hero-visual { position: relative; min-height: 525px; }
+    .hero-image { position: absolute; inset: 0 0 26px 28px; height: calc(100% - 26px); border-radius: 180px 180px 18px 18px; box-shadow: var(--shadow); }
+    .image-label { position: absolute; bottom: 0; left: 0; background: var(--white); padding: 19px 23px; border-radius: 14px; box-shadow: var(--shadow); max-width: 240px; }
+    .image-label strong { display: block; font: 700 1rem "Manrope", sans-serif; }
+    .image-label small { color: var(--muted); }
+    .image-index { position: absolute; right: 18px; top: 18px; background: rgba(255,254,250,.92); border-radius: 999px; padding: 8px 13px; font-size: .75rem; font-weight: 700; }
+    .section { padding: 84px 0; }
+    .section-white { background: var(--white); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 36px; }
+    .section-head h2, .intro h2 { font-size: clamp(2rem, 3.3vw, 3.1rem); line-height: 1.12; margin: 12px 0 0; max-width: 650px; }
+    .section-head p { max-width: 370px; margin: 0; color: var(--muted); }
+    .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+    .service-card { border: 1px solid var(--line); border-radius: var(--radius); padding: 25px 22px; background: var(--paper); min-height: 235px; }
+    .service-icon { display: grid; place-items: center; width: 47px; height: 47px; border-radius: 14px; background: var(--sage); color: var(--bronze-dark); font-size: 1.25rem; margin-bottom: 25px; }
+    .service-card h3 { font-size: 1.08rem; margin: 0 0 9px; }
+    .service-card p { color: var(--muted); font-size: .9rem; margin: 0; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+    .intro-image { height: 470px; border-radius: var(--radius); }
+    .intro-copy p { color: var(--muted); margin: 19px 0; }
+    .steps { margin-top: 25px; display: grid; gap: 17px; }
+    .step { display: flex; gap: 14px; align-items: flex-start; }
+    .step-num { flex: 0 0 34px; height: 34px; border: 1px solid #c7b398; color: var(--bronze-dark); display: grid; place-items: center; border-radius: 50%; font-weight: 700; font-size: .82rem; }
+    .step strong { display: block; margin-bottom: 3px; }
+    .step span { color: var(--muted); font-size: .9rem; }
+    .catalogue-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .project-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .project-card img { height: 255px; transition: transform .45s; }
+    .project-card:hover img { transform: scale(1.035); }
+    .project-image { overflow: hidden; position: relative; }
+    .sample-tag { position: absolute; top: 14px; left: 14px; background: rgba(255,254,250,.94); color: #555b51; font-size: .68rem; font-weight: 700; padding: 7px 10px; border-radius: 999px; }
+    .project-info { padding: 20px; }
+    .project-info h3 { margin: 0 0 6px; font-size: 1.12rem; }
+    .project-info p { color: var(--muted); font-size: .9rem; margin: 0 0 15px; }
+    .text-link { font-size: .88rem; font-weight: 700; color: var(--bronze-dark); }
+    .text-link:hover { text-decoration: underline; }
+    .note { font-size: .82rem; color: var(--muted); margin-top: 19px; }
+    .quote-band { background: var(--ink); color: white; padding: 64px 0; }
+    .quote-grid { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+    .quote-grid h2 { font-size: clamp(2rem, 3.5vw, 3.1rem); line-height: 1.12; max-width: 660px; margin: 0; }
+    .quote-grid p { color: #c9cec4; margin: 13px 0 0; }
+    .quote-grid .btn { flex-shrink: 0; background: #f4eee3; color: var(--ink); }
+    .coverage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .coverage-card { border-radius: var(--radius); background: var(--sage); padding: 28px; display: flex; align-items: flex-start; gap: 17px; }
+    .coverage-card .service-icon { background: rgba(255,255,255,.7); flex-shrink: 0; margin: 0; }
+    .coverage-card h3 { margin: 0 0 6px; }
+    .coverage-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 60px; }
+    .contact-copy p { color: var(--muted); }
+    .contact-details { display: grid; gap: 14px; margin-top: 26px; }
+    .contact-line { display: flex; gap: 12px; align-items: center; }
+    .contact-line b { display: block; font-size: .92rem; }
+    .contact-line small { color: var(--muted); }
+    .contact-form { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .contact-form h3 { margin: 0 0 6px; font-size: 1.35rem; }
+    .contact-form > p { color: var(--muted); font-size: .9rem; margin: 0 0 22px; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    label { display: block; font-size: .82rem; font-weight: 700; margin-bottom: 7px; }
+    input, select, textarea { width: 100%; border: 1px solid #d7d9cf; background: white; color: var(--ink); border-radius: 10px; padding: 12px 13px; font: 500 .91rem "DM Sans", sans-serif; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--bronze); box-shadow: 0 0 0 3px rgba(168,121,76,.12); }
+    .form-field { margin-bottom: 15px; }
+    textarea { min-height: 105px; resize: vertical; }
+    .contact-form .btn { width: 100%; margin-top: 5px; }
+    footer { background: #1c211c; color: #f6f3ea; padding: 31px 0; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    footer p { color: #b8beb3; font-size: .82rem; margin: 5px 0 0; }
+    .footer-links { display: flex; gap: 19px; font-size: .85rem; }
+    .wa-float { position: fixed; z-index: 9; right: 22px; bottom: 22px; width: 58px; height: 58px; display: grid; place-items: center; background: #188b58; color: white; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,.2); font-size: 1.45rem; }
+    .wa-float:hover { background: #116e45; transform: translateY(-2px); }
+    .small-print { font-size: .75rem; color: var(--muted); }
+    @media (max-width: 900px) {
+      .hero-grid { gap: 28px; grid-template-columns: 1fr 1fr; }
+      .hero-visual { min-height: 430px; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .intro-grid { gap: 35px; }
+      .catalogue-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { gap: 30px; }
+      .nav-links { gap: 15px; }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 30px, 560px); }
+      .topline .container { justify-content: center; text-align: center; }
+      .topline .topline-extra { display: none; }
+      nav { min-height: 69px; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 69px; left: 0; right: 0; background: var(--paper); padding: 20px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 17px; }
+      .nav-links.open { display: flex; }
+      .nav-links .btn { align-self: flex-start; }
+      .hero { padding: 39px 0 56px; }
+      .hero-grid, .intro-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 36px; }
+      h1 { font-size: clamp(2.55rem, 12vw, 3.8rem); }
+      .hero-copy { font-size: 1rem; }
+      .hero-visual { min-height: 390px; }
+      .hero-image { inset: 0 0 20px 14px; height: calc(100% - 20px); border-radius: 145px 145px 16px 16px; }
+      .image-label { max-width: 205px; padding: 15px 17px; }
+      .section { padding: 60px 0; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 14px; }
+      .service-grid { gap: 11px; }
+      .service-card { padding: 19px 16px; min-height: 220px; }
+      .service-icon { margin-bottom: 17px; }
+      .intro-image { height: 330px; }
+      .catalogue-grid { grid-template-columns: 1fr; gap: 16px; }
+      .project-card img { height: 245px; }
+      .quote-grid { align-items: flex-start; flex-direction: column; }
+      .coverage-grid { grid-template-columns: 1fr; }
+      .contact-form { padding: 21px; }
+      .field-grid { grid-template-columns: 1fr; gap: 0; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+      .footer-links { flex-wrap: wrap; }
+      .wa-float { width: 53px; height: 53px; right: 15px; bottom: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- BEFORE PUBLISHING: replace the business name and WhatsApp number in the SETTINGS section below. -->
+  <div class="topline">
+    <div class="container">
+      <span>Glass measurement · Cutting · Installation</span>
+      <span class="topline-extra">Serving Kajiado County & Nairobi</span>
+    </div>
+  </div>
+  <header>
+    <nav class="container" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Clearline Glass and Windows home">
+        <span class="brand-mark">◫</span>
+        <span>Spoken Seed<small>Measured with care. Fitted to last.</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" id="menuToggle">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#process">How it works</a>
+        <a href="#catalogue">Gallery</a>
+        <a href="#coverage">Service area</a>
+        <a href="#contact" class="btn">Get a quote ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">For homes & buildings</span>
+          <h1>Bring more light into <em>your space.</em></h1>
+          <p class="hero-copy">Reliable glass measurement, cutting and window installation for new builds, renovations and home improvements. Tell us what you need, and let’s talk through the right fit for your space.</p>
+          <div class="hero-actions">
+            <a class="btn btn-bronze" href="#" data-wa="Hello, I would like to enquire about glass measurement or installation.">Chat on WhatsApp <span>↗</span></a>
+            <a class="btn btn-outline" href="#services">Explore services</a>
+          </div>
+          <div class="trust-row">
+            <span>Made to measure</span>
+            <span>Home visits available</span>
+            <span>Personal service</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-image" src="images/Modern%20Countryside%20Home%20with%20Dark%20Windows.png" alt="Modern countryside home with dark framed windows" />
+          <div class="image-index">01 / GLASS & LIGHT</div>
+          <div class="image-label"><strong>A clean, considered finish.</strong><small>Glass work for everyday living.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">What we do</span><h2>The right glass work, from measuring to fitting.</h2></div>
+          <p>Whether you’re finishing a new house or replacing a broken pane, get practical help from measurement through installation.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">⌗</div>
+            <h3>Glass measurement</h3>
+            <p>Measurements taken for your window or glass space to help achieve a proper fit.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">◇</div>
+            <h3>Glass cutting</h3>
+            <p>Glass cut to the measurements and requirements discussed for your project.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">▤</div>
+            <h3>Putty & glass fitting</h3>
+            <p>Traditional putty-and-glass work for suitable window frames and repairs.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">⌂</div>
+            <h3>Home installation</h3>
+            <p>On-site glass installation for homes, renovations and newly built properties.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container intro-grid">
+        <img class="intro-image" src="images/Modern%20Countryside%20Home%20with%20Dark%20Windows.png" alt="Modern countryside home with dark framed windows" loading="lazy" />
+        <div class="intro-copy">
+          <span class="eyebrow">Simple from the start</span>
+          <h2>Good work begins with the right measurements.</h2>
+          <p>Every window and every space is different. We start by understanding what you need, then discuss measurements, glass requirements and the installation before agreeing on the price.</p>
+          <div class="steps">
+            <div class="step"><div class="step-num">1</div><div><strong>Tell us about your project</strong><span>WhatsApp a message and, if possible, a photo of the window or building.</span></div></div>
+            <div class="step"><div class="step-num">2</div><div><strong>Arrange measurements</strong><span>We discuss your location and whether an on-site measurement is needed.</span></div></div>
+            <div class="step"><div class="step-num">3</div><div><strong>Confirm your quote</strong><span>Pricing depends on the glass, sizes, quantity, location and work required.</span></div></div>
+            <div class="step"><div class="step-num">4</div><div><strong>Get the glass fitted</strong><span>Once the details are agreed, we arrange the work with you.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="catalogue">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Ideas for your space</span><h2>A look at the kind of finish you’re planning for.</h2></div>
+          <p>Browse styles for inspiration, then message us to discuss what works for your building.</p>
+        </div>
+        <div class="catalogue-grid">
+          <article class="project-card">
+            <div class="project-image"><img src="images/Screenshot%202026-10-21%20at%2022.07.16.png" alt="Timber framed window on a white exterior wall" loading="lazy"><span class="sample-tag">WINDOW STYLE</span></div>
+            <div class="project-info"><h3>Timber framed windows</h3><p>A warm timber frame paired with a clean, light exterior.</p><a href="#" class="text-link" data-wa="Hello, I am interested in timber framed windows.">Enquire about this style ↗</a></div>
+          </article>
+          <article class="project-card">
+            <div class="project-image"><img src="images/Screenshot%202026-10-21%20at%2022.07.27.png" alt="Timber framed window set into a brick exterior wall" loading="lazy"><span class="sample-tag">WINDOW STYLE</span></div>
+            <div class="project-info"><h3>Windows in brick homes</h3><p>A timber framed window set into a warm brick exterior.</p><a href="#" class="text-link" data-wa="Hello, I am interested in a window for a brick home.">Enquire about this style ↗</a></div>
+          </article>
+          <article class="project-card">
+            <div class="project-image"><img src="images/Screenshot%202026-10-21%20at%2022.07.35.png" alt="Dark framed bay window on a light exterior wall" loading="lazy"><span class="sample-tag">WINDOW STYLE</span></div>
+            <div class="project-info"><h3>Dark framed bay windows</h3><p>A projecting bay window that brings extra light into the room.</p><a href="#" class="text-link" data-wa="Hello, I am interested in a dark framed bay window.">Enquire about this style ↗</a></div>
+          </article>
+        </div>
+        <p class="note">Window styles shown are examples. Available frame and glass options can be discussed for your project.</p>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="container quote-grid">
+        <div><h2>Not sure what your windows need?</h2><p>Send a photo or describe the job. We’ll discuss the next step with you.</p></div>
+        <a href="#" class="btn" data-wa="Hello, I need advice about glass work for my home.">Ask for a quote on WhatsApp ↗</a>
+      </div>
+    </section>
+
+    <section class="section" id="coverage">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Where we work</span><h2>Local service, with Nairobi also within reach.</h2></div>
+          <p>Share your area when you enquire so travel and any site visit can be discussed upfront.</p>
+        </div>
+        <div class="coverage-grid">
+          <div class="coverage-card"><div class="service-icon">⌖</div><div><h3>Kajiado County</h3><p>Our main service area, including home visits and glass installation by arrangement.</p></div></div>
+          <div class="coverage-card"><div class="service-icon">⌖</div><div><h3>Nairobi</h3><p>Projects in Nairobi can also be discussed. Availability and any travel costs are confirmed before work begins.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Let’s talk about your project</span>
+          <h2 style="font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.1;margin:14px 0;">Tell us what you need.</h2>
+          <p>For prices, measurements and installation arrangements, call or WhatsApp directly. There’s no online checkout — just a straightforward conversation about your job.</p>
+          <div class="contact-details">
+            <div class="contact-line"><div class="service-icon">☏</div><div><b>Call or WhatsApp</b><small id="phoneLabel">254 727 219 336</small></div></div>
+            <div class="contact-line"><div class="service-icon">⌖</div><div><b>Kajiado County & Nairobi</b><small>Visits arranged according to location and project</small></div></div>
+            <div class="contact-line"><div class="service-icon">◷</div><div><b>Quotes by enquiry</b><small>Price confirmed based on your measurements and requirements</small></div></div>
+          </div>
+        </div>
+        <form class="contact-form" id="quoteForm">
+          <h3>Request a quote</h3>
+          <p>Fill in a few details and continue on WhatsApp to send your enquiry.</p>
+          <div class="field-grid">
+            <div class="form-field"><label for="customerName">Your name</label><input id="customerName" name="customerName" placeholder="e.g. Wanjiku" required></div>
+            <div class="form-field"><label for="customerArea">Your area</label><input id="customerArea" name="customerArea" placeholder="e.g. Kitengela" required></div>
+          </div>
+          <div class="form-field"><label for="serviceType">What do you need?</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Choose a service</option>
+              <option>Glass measurement</option>
+              <option>Glass cutting</option>
+              <option>Putty and glass installation</option>
+              <option>Window glass replacement or repair</option>
+              <option>Glass for a new-build home</option>
+              <option>Other glass work</option>
+            </select>
+          </div>
+          <div class="form-field"><label for="projectDetails">Tell us a little more (optional)</label><textarea id="projectDetails" name="projectDetails" placeholder="How many windows? Is it a new build or a replacement?"></textarea></div>
+          <button class="btn btn-bronze" type="submit">Continue to WhatsApp ↗</button>
+          <p class="small-print" style="margin:12px 0 0;">Your details are not stored by this website. The message opens in WhatsApp for you to send.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div><a href="#home" class="brand"><span class="brand-mark" style="background:#292f28;color:#e3c49d;border-color:#555b50;">◫</span><span>Spoken Seed<small style="color:#b8beb3;">Measured with care. Fitted to last.</small></span></a><p>Glass measurement, cutting and installation in Kajiado County and Nairobi.</p></div>
+      <div class="footer-links"><a href="#services">Services</a><a href="#catalogue">Gallery</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="container" style="margin-top:24px;border-top:1px solid #3b4239;padding-top:17px;color:#b8beb3;font-size:.76rem;">© <span id="year"></span> Spoken Seed. All rights reserved.</div>
+  </footer>
+
+  <a href="#" class="wa-float" data-wa="Hello, I would like to enquire about glass installation." aria-label="Chat on WhatsApp">✆</a>
+
+  <script>
+    /* ===================== SETTINGS: EDIT THESE BEFORE PUBLISHING =====================
+       1. Replace BUSINESS_NAME with your mum's real business name (or keep a chosen brand).
+       2. Replace WHATSAPP_NUMBER with her number including Kenya country code 254, digits only.
+          Example format: 2547XXXXXXXX — do not include +, spaces or dashes.
+       3. If you don't have a separate business name, use her preferred trading name.
+    ================================================================================ */
+    const BUSINESS_NAME = "Spoken Seed";
+    const WHATSAPP_NUMBER = "254727219336";
+
+    document.title = BUSINESS_NAME + " | Glass Work for Your Home";
+    document.querySelectorAll(".brand").forEach(el => {
+      const name = el.querySelector("span:nth-child(2)");
+      if (name && name.childNodes.length) name.childNodes[0].textContent = BUSINESS_NAME;
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.textContent = open ? "✕" : "☰";
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    }));
+
+    function hasRealNumber() {
+      return /^\d{10,15}$/.test(WHATSAPP_NUMBER) && !WHATSAPP_NUMBER.endsWith("0000000000");
+    }
+    function openWhatsApp(message) {
+      if (!hasRealNumber()) {
+        alert("Before using WhatsApp, add your mum's real phone number in the SETTINGS section at the bottom of this HTML file.");
+        return;
+      }
+      window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+    }
+    document.querySelectorAll("[data-wa]").forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        openWhatsApp(link.getAttribute("data-wa"));
+      });
+    });
+    document.getElementById("quoteForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const name = document.getElementById("customerName").value.trim();
+      const area = document.getElementById("customerArea").value.trim();
+      const service = document.getElementById("serviceType").value;
+      const details = document.getElementById("projectDetails").value.trim();
+      const message = `Hello ${BUSINESS_NAME}, my name is ${name}. I am in ${area} and I need: ${service}.${details ? "\nProject details: " + details : ""}\nPlease let me know how we can arrange a quote.`;
+      openWhatsApp(message);
+    });
+  </script>
+</body>
+</html>
